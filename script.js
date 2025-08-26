@@ -1,14 +1,15 @@
-const dropdown = document.getElementById("dropDown");
-const content = document.getElementById("dropDownContent");
+const dropdown = document.querySelectorAll(".dropDown");
 
-function toggleVisibility() {
-  if (content.style.display === "none") {
-    content.style.display = "block";
+dropdown.forEach(menu => {
+  menu.addEventListener("click", () => {
+    toggleVisibility(menu.children[1]);
+  })
+});
+
+function toggleVisibility(child) {
+  if (child.style.display === "none") {
+    child.style.display = "block";
   } else {
-    content.style.display = "none"
+    child.style.display = "none"
   }
 }
-
-dropdown.addEventListener("click", () => {
-  toggleVisibility();
-})

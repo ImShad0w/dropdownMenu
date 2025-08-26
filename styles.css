@@ -1,5 +1,8 @@
-#dropDownContent {
+.dropDownContent {
   display: none;
+  padding: 15px;
+  background-color: black;
+  color: white;
 }
 
 body{
